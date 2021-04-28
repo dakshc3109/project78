@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Project 78</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+</head>
+<body>
+        <h1>My Family Book</h1>
+        <img id="album" src="https://images-na.ssl-images-amazon.com/images/I/51KNpAKei-L.jpg">
+        <br>
+        <label id="names"></label>
+        <div>
+        <button type=button onclick="nextSlide()" >Play</button>
+        </div>
+ <script>
+     var images = ["https://images-na.ssl-images-amazon.com/images/I/51KNpAKei-L.jpg",
+     "vikas.jpg", 
+     "shobha.jpg", 
+     "daksh.jpg", 
+     "tejal.jpg"];
+
+     var names = ["", "Mr Vikas Chaudhary", "Ms Shobha Chaudhary", "Daksh Chaudhary", "Tejal Chaudhary"];
+
+var i = 0;
+
+     function nextSlide(){
+  
+  document.getElementById("album").src=images[i];
+
+  document.getElementById("names").innerHTML = names[i];
+  i++
+
+  if (i == 5)
+  {
+      i = 0;
+  }
+   
+ }
+ </script>
+
+</body>
+</html>
